@@ -1,0 +1,4 @@
+java -jar build/libs/org.sat4j.core.jar src/test/resources/benchmarks/pddl/testForSAT/example.cnf
+
+s SATISFIABLE
+v 1 -2 -3 4 -5 0
