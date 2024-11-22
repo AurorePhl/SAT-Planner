@@ -6,9 +6,9 @@
 	l2 - room
 	)
 	(:init
-	(at r l1)
+	(at r l1)(clear l2)
 )
-	(:goal (and
+	(:goal 
 	(at r l2)
-	))
+	)
 )
