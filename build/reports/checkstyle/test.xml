@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.9">
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\Tools.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\instantiation\ADLProblemInstantiationTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\instantiation\HTNProblemInstantiationTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\instantiation\TemporalProblemInstantiationTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\parser\HDDLParserTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\parser\PDDLParserTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\planners\htn\PFDTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\planners\htn\TFDTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\planners\statespace\FFTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\planners\statespace\GSPTest.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\test\java\fr\uga\pddl4j\test\planners\statespace\HSPTest.java">
+</file>
+</checkstyle>
