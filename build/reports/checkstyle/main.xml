@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.9">
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\DirectPlannerConfigurationExample.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\PDDLParserExample.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\PlannerConfigurationExample.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\ProblemInstantiationExample.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\asp\ASP.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\asp\Node.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\asp\package-info.java">
 </file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\DirectPlannerConfigurationExample.java">
+</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\package-info.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\PDDLParserExample.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\PlannerConfigurationExample.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\examples\ProblemInstantiationExample.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\AbstractHeuristic.java">
 </file>
@@ -40,6 +40,8 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\Max.java">
 </file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\package-info.java">
+</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\PlanningGraphHeuristic.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\RelaxedGraphHeuristic.java">
@@ -51,8 +53,6 @@
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\Sum.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\SumMutex.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\heuristics\state\package-info.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\AbstractParsedObject.java">
 </file>
@@ -73,6 +73,8 @@
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\Message.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\NamedTypedList.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\package-info.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\ParsedAbstractOperator.java">
 </file>
@@ -106,13 +108,13 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\UnexpectedExpressionException.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\parser\package-info.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\AbstractPlan.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\Hierarchy.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\JsonAdapter.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\package-info.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\ParallelPlan.java">
 </file>
@@ -122,23 +124,7 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\TemporalPlan.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\plan\package-info.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\AbstractPlanner.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\InvalidConfigurationException.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\LogLevel.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\Planner.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\PlannerConfiguration.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\ProblemNotSupportedException.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\SearchStrategy.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\Statistics.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\AbstractHTNPlanner.java">
 </file>
@@ -150,6 +136,8 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\AbstractSTNPlanner.java">
 </file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\package-info.java">
+</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\PFD.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\PFDNode.java">
@@ -160,9 +148,19 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\TFDNode.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\htn\stn\package-info.java">
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\InvalidConfigurationException.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\LogLevel.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\package-info.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\Planner.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\PlannerConfiguration.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\ProblemNotSupportedException.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\SearchStrategy.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\AbstractStateSpacePlanner.java">
 </file>
@@ -172,13 +170,11 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\HSP.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\StateSpacePlanner.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\package-info.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\AStar.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\AbstractStateSpaceSearch.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\AStar.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\BreadthFirstSearch.java">
 </file>
@@ -194,9 +190,13 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\NodeComparator.java">
 </file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\package-info.java">
+</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\StateSpaceSearch.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\search\package-info.java">
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\statespace\StateSpacePlanner.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\planners\Statistics.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\AbstractAtomicFormula.java">
 </file>
@@ -219,18 +219,6 @@
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\InitialState.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\InstantiatedProblem.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\PostInstantiatedProblem.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\PreInstantiatedProblem.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\Problem.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\RequirementNotSupportedException.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\State.java">
-</file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\Task.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\numeric\AbstractNumericExpression.java">
 </file>
@@ -296,11 +284,25 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\operator\OrderingConstraintNetwork.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\operator\TaskNetwork.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\operator\package-info.java">
 </file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\operator\TaskNetwork.java">
+</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\package-info.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\PostInstantiatedProblem.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\PreInstantiatedProblem.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\Problem.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\RequirementNotSupportedException.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\State.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\Task.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\time\package-info.java">
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\time\TemporalCondition.java">
 </file>
@@ -312,7 +314,30 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\time\TemporalRelation.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\problem\time\package-info.java">
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\sat\Decoding.java">
+<error line="5" severity="warning" message="Mauvais ordre lexicographique pour l&apos;import &apos;java.io.IOException&apos;. Il devrait être avant &apos;java.io.InputStreamReader&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="9" column="5" severity="warning" message="Commentaire Javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="9" column="42" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="19" column="44" severity="warning" message="WhitespaceAround: &apos;+&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="19" column="45" severity="warning" message="WhitespaceAround: &apos;+&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" column="19" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" column="40" severity="warning" message="WhitespaceAround: &apos;!=&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" column="42" severity="warning" message="WhitespaceAround: &apos;!=&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" column="45" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="21" severity="warning" message="L&apos;instruction &apos;while&apos; devrait utiliser des accolades (&apos;{&apos; et &apos;}&apos;)." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="21" column="26" severity="warning" message="WhitespaceAround: &apos;while&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="29" column="19" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="34" column="9" severity="warning" message="&apos;}&apos; à la colonne 9 devrait être sur la même ligne que la prochaine partie d&apos;une instruction multi-bloc (celui qui contient directement plusieurs blocs : if/else-if/else, do/while ou try/catch/finally)." source="RightCurlySame"/>
+<error line="38" column="11" severity="warning" message="WhitespaceAround: &apos;if&apos; is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="38" column="29" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="39" column="47" severity="warning" message="WhitespaceAround: &apos;+&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="40" column="9" severity="warning" message="&apos;}&apos; à la colonne 9 devrait être sur la même ligne que la prochaine partie d&apos;une instruction multi-bloc (celui qui contient directement plusieurs blocs : if/else-if/else, do/while ou try/catch/finally)." source="RightCurlySame"/>
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\sat\Encodage.java">
+<error line="3" severity="warning" message="L&apos;utilisation des import.* est prohibé - java.io.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="4" severity="warning" message="L&apos;utilisation des import.* est prohibé - java.util.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="12" column="5" severity="warning" message="Commentaire Javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="23" severity="warning" message="La distance entre la déclaration de la variable &apos;outputFile&apos; et sa première utilisation est de 5, alors que le maximum autorisé est de 3. Envisagez de rendre cette variable finale si vous avez encore besoin de stocker sa valeur à l&apos;avance (avant les appels de méthode qui pourrait avoir des effets secondaires sur la valeur d&apos;origine)." source="com.puppycrawl.tools.checkstyle.checks.coding.VariableDeclarationUsageDistanceCheck"/>
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\sat\satPlanner\SAT.java">
 </file>
@@ -324,8 +349,8 @@
 </file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\util\IntMatrix.java">
 </file>
-<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\util\SquareBitMatrix.java">
-</file>
 <file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\util\package-info.java">
+</file>
+<file name="C:\Users\asiph\PDDL\SAT-Planner\src\main\java\fr\uga\pddl4j\util\SquareBitMatrix.java">
 </file>
 </checkstyle>

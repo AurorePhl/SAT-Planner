@@ -1,4 +1,4 @@
-package fr.uga.pddl4j.sat.satPlanner;
+package fr.uga.pddl4j.sat;
 
 import java.io.BufferedReader; 
 import java.io.InputStreamReader;
