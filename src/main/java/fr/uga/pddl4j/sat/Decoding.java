@@ -10,7 +10,7 @@ public class Decoding {
         String plan = "";
         Boolean isSatisfiable = false;
         try {
-            String[] command = {"java", "-jar", "build/libs/org.sat4j.core.jar", pathToCnf};  
+            String[] command = {"java", "-jar", "sat4j-2_3_6/org.sat4j.core/2.3.6/org.ow2.sat4j.core-2.3.6.jar", pathToCnf};  
             ProcessBuilder processBuilder = new ProcessBuilder(command);
             Process process = processBuilder.start();
             BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream())); 
