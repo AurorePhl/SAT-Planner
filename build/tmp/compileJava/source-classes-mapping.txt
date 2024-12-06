@@ -1,0 +1,32 @@
+fr/uga/pddl4j/planners/statespace/package-info.java
+ fr.uga.pddl4j.planners.statespace.package-info
+fr/uga/pddl4j/planners/htn/package-info.java
+ fr.uga.pddl4j.planners.htn.package-info
+fr/uga/pddl4j/examples/package-info.java
+ fr.uga.pddl4j.examples.package-info
+fr/uga/pddl4j/util/package-info.java
+ fr.uga.pddl4j.util.package-info
+fr/uga/pddl4j/plan/package-info.java
+ fr.uga.pddl4j.plan.package-info
+fr/uga/pddl4j/problem/operator/package-info.java
+ fr.uga.pddl4j.problem.operator.package-info
+fr/uga/pddl4j/problem/time/package-info.java
+ fr.uga.pddl4j.problem.time.package-info
+fr/uga/pddl4j/parser/package-info.java
+ fr.uga.pddl4j.parser.package-info
+fr/uga/pddl4j/examples/asp/package-info.java
+ fr.uga.pddl4j.examples.asp.package-info
+fr/uga/pddl4j/problem/numeric/package-info.java
+ fr.uga.pddl4j.problem.numeric.package-info
+fr/uga/pddl4j/planners/package-info.java
+ fr.uga.pddl4j.planners.package-info
+fr/uga/pddl4j/planners/htn/stn/package-info.java
+ fr.uga.pddl4j.planners.htn.stn.package-info
+fr/uga/pddl4j/heuristics/state/package-info.java
+ fr.uga.pddl4j.heuristics.state.package-info
+fr/uga/pddl4j/problem/package-info.java
+ fr.uga.pddl4j.problem.package-info
+fr/uga/pddl4j/planners/statespace/search/package-info.java
+ fr.uga.pddl4j.planners.statespace.search.package-info
+fr/uga/pddl4j/heuristics/package-info.java
+ fr.uga.pddl4j.heuristics.package-info
