@@ -1,3 +1,6 @@
+
+// inspiration de https://github.com/gaspard-quenard/SAT_planner/blob/master/app/src/main/java/sat/SAT.java 
+
 package fr.uga.pddl4j.sat;
 
 import fr.uga.pddl4j.parser.DefaultParsedProblem;
@@ -71,168 +74,81 @@ public class SAT extends AbstractPlanner {
         return pb;
     }
 
-    /**
-     * Display a fluent in easily readable format
-     * (for example: at r1 l1).
-     *
-     * @param f       The fluent to display in easily readable format
-     * @param problem The problem to solve
-     */
-    public void prettyPrintFluent(Fluent f, Problem problem) {
-        StringBuilder fluentToDisplay = new StringBuilder();
-
-        // Add the fluent name (e.g "at" for the fluent at ?r - robot ?l - location)
-        fluentToDisplay.append(problem.getPredicateSymbols().get(f.getSymbol()));
-
-        // Then for each argument of this fluent, add the argument into the string
-        for (int fluentArg : f.getArguments()) {
-            fluentToDisplay.append(" " + problem.getConstantSymbols().get(fluentArg));
+    
+    // méthode pour afficher un fluent pour que ce soit lisible, pour débugguer
+    public void prettyPrintFluent(Fluent f, Problem problem) {  
+        StringBuilder fluentToDisplay = new StringBuilder(); // construire la chaine
+        fluentToDisplay.append(problem.getPredicateSymbols().get(f.getSymbol())); // ajouter le symbole du prédicat
+        for (int fluentArg : f.getArguments()) { // pour chaque argument du fluent
+            fluentToDisplay.append(" " + problem.getConstantSymbols().get(fluentArg)); // ajouter l'argument dans la chaine
         }
-
         LOGGER.info("Fluent: {}\n", fluentToDisplay);
     }
 
-    /**
-     * Display an action in easily readable format
-     * (for example: move r1 l1 l2).
-     *
-     * @param a       The action to display in easily readable format
-     * @param problem The problem to solve
-     */
-    public void prettyPrintAction(Action a, Problem problem) {
-        StringBuilder actionToDisplay = new StringBuilder();
-
-        // Add the action name (e.g "move" for the action move r1 l1 l2)
-        actionToDisplay.append(a.getName());
-
-        // Then for each argument of this action, add the argument into the string
-        for (int actionArg : a.getInstantiations()) {
-            actionToDisplay.append(" " + problem.getConstantSymbols().get(actionArg));
+    // pareil mais pour action
+    public void prettyPrintAction(Action a, Problem problem) { // afficher une action
+        StringBuilder actionToDisplay = new StringBuilder();    // construire la chaine
+        actionToDisplay.append(a.getName()); // ajouter le nom de l'action
+        for (int actionArg : a.getInstantiations()) { // pour chaque argument de l'action
+            actionToDisplay.append(" " + problem.getConstantSymbols().get(actionArg)); // ajouter l'argument dans la chaine
         }
 
         LOGGER.info("Action: {}\n", actionToDisplay);
     }
-
-    /**
-     * Get the fluent unique ID for the time step specified. To encode a problem as
-     * a CNF formula, there must be an unique ID for each state
-     * and each action at each time step.
-     * The encodage of the unique ID for a state or an action is as follow:
-     * <ul>
-     * <li>1 -> idx of fluent 0 at time step 0</li>
-     * <li>2 -> idx of fluent 1 at time step 0</li>
-     * <li>...</li>
-     * <li>N + 1-> idx of fluent N at time step 0</li>
-     * <li>N + 2-> idx of action 0 at time step 0</li>
-     * <li>...</li>
-     * <li>N + M + 1 -> idx of action M at time step 0</li>
-     * <li>N + M + 2 -> idx of fluent 0 at time step 1</li>
-     * <li>...</li>
-     * <li>(N + M) * n + 1-> idx of action M at time step n</li>
-     * </ul>
-     *
-     * @param problem  The problem to solve
-     * @param state    The state to find the unique ID
-     * @param timeStep The time step of the fluent
-     * @return The unique ID of the fluent (i.e unique ID of the state at the given
-     * time step)
-     */
-    public int getFluentUniqueIDforTimeStep(Problem problem, Fluent state, int timeStep) {
-        int idxState = problem.getFluents().indexOf(state);
-        return (problem.getFluents().size() + problem.getActions().size()) * timeStep + 1 + idxState;
+    
+    // méthode pour obtenir l'identifiant unique d'un fluent à un pas de temps donné
+    public int getFluentUniqueIDforTimeStep(Problem problem, Fluent state, int timeStep) { 
+        int idxState = problem.getFluents().indexOf(state); // obtenir index du fluent
+        return (problem.getFluents().size() + problem.getActions().size()) * timeStep + 1 + idxState; // calculer l'identifiant unique 
     }
 
-    /**
-     * Get the action unique ID for the time step specified. To encode a problem as
-     * a CNF formula, there must be an unique ID for each state
-     * and each action at each time step.
-     * The encodage of the unique ID for a state or an action is as follow:
-     * <ul>
-     * <li>1 -> idx of fluent 0 at time step 0</li>
-     * <li>2 -> idx of fluent 1 at time step 0</li>
-     * <li>...</li>
-     * <li>N + 1-> idx of fluent N at time step 0</li>
-     * <li>N + 2-> idx of action 0 at time step 0</li>
-     * <li>...</li>
-     * <li>N + M + 1 -> idx of action M at time step 0</li>
-     * <li>N + M + 2 -> idx of fluent 0 at time step 1</li>
-     * <li>...</li>
-     * <li>(N + M) * n + 1-> idx of action M at time step n</li>
-     * </ul>
-     *
-     * @param problem  The problem to solve
-     * @param action   The action to find the unique ID
-     * @param timeStep The time step of the action
-     * @return The unique ID of the action at the given time step
-     */
+    // méthode pour obtenir l'identifiant unique d'une action à un pas de temps donné
     public int getActionUniqueIDforTimeStep(Problem problem, Action action, int timeStep) {
-        int idxAction = problem.getActions().indexOf(action);
-        return (problem.getFluents().size() + problem.getActions().size()) * timeStep + 1 + problem.getFluents().size()
+        int idxAction = problem.getActions().indexOf(action); // obtenir index de l'action
+        return (problem.getFluents().size() + problem.getActions().size()) * timeStep + 1 + problem.getFluents().size() // calculer l'identifiant unique
                 + idxAction;
     }
 
-    /**
-     * Given an unique ID (each state and each action are given an unique ID for
-     * each
-     * time step of the problem to allow the encoding of the problem into a CNF
-     * formula), find the action linked to this ID.
-     *
-     * @param problem        The problem to solve
-     * @param actionUniqueID Unique ID of an action
-     * @return The action object linked to this ID if exist, else null
-     */
+    // méthode pour obtenir une action à partir de son identifiant unique
     public Action getActionWithIdx(Problem problem, int actionUniqueID) {
-
-        if (actionUniqueID <= 0) {
+        if (actionUniqueID <= 0) { // si l'identifiant est négatif
             return null;
         }
-
+        // calculer l'index de l'action
         int idx = (actionUniqueID - 1) % (problem.getFluents().size() + problem.getActions().size());
-
         if (idx >= problem.getFluents().size()) {
             return problem.getActions().get(idx - problem.getFluents().size());
         } else {
-            // This is a fluent, not an action
             return null;
         }
     }
 
-    /**
-     * Encode the initial state as a CNF formula in dimacs format.
-     *
-     * @param problem  The problem to solve
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
+    
     public Vec<IVecInt> encodeInitialState(final Problem problem, int planSize) {
 
-        Vec<IVecInt> clausesInitState = new Vec<IVecInt>();
-
-        // Get all the fluents at the initial state
-        BitVector initStatePosFluents = problem.getInitialState().getPositiveFluents();
-
-        HashSet<Integer> fluentsNotInInitState = new HashSet<Integer>();
-        for (int i = 0; i < problem.getFluents().size(); i++) {
-            fluentsNotInInitState.add(i);
+        Vec<IVecInt> clausesInitState = new Vec<IVecInt>(); // vecteur de clausesEtat initial
+        BitVector initStatePosFluents = problem.getInitialState().getPositiveFluents(); // vecteur de fluents positifs de l'état initial
+        HashSet<Integer> fluentsNotInInitState = new HashSet<Integer>(); // fluents qui ne sont pas dans l'état initial
+        for (int i = 0; i < problem.getFluents().size(); i++) {  // pour chaque fluent
+            fluentsNotInInitState.add(i); // ajouter le fluent dans la liste des fluents qui ne sont pas dans l'état initial
         }
 
-        for (int p = initStatePosFluents.nextSetBit(0); p >= 0; p = initStatePosFluents.nextSetBit(p + 1)) {
-            Fluent f = problem.getFluents().get(p);
-            // prettyPrintFluent(f, problem);
+        for (int p = initStatePosFluents.nextSetBit(0); p >= 0; p = initStatePosFluents.nextSetBit(p + 1)) { // pour chaque fluent positif de l'état initial
+            Fluent f = problem.getFluents().get(p); // obtenir le fluent
 
-            fluentsNotInInitState.remove(p);
+            fluentsNotInInitState.remove(p); 
 
-            // Add the fluent into the clauseInitState
-            int idxFluent = getFluentUniqueIDforTimeStep(problem, f, 0);
-            VecInt clause = new VecInt(new int[]{idxFluent});
-            clausesInitState.push(clause);
+            int idxFluent = getFluentUniqueIDforTimeStep(problem, f, 0); // obtenir l'identifiant unique du fluent
+            VecInt clause = new VecInt(new int[]{idxFluent}); // créer une clause avec l'identifiant unique du fluent
+            clausesInitState.push(clause); // ajouter la clause dans le vecteur de clausesEtat initial
 
-            initStatePosFluents.set(p);
+            initStatePosFluents.set(p); // ajouter le fluent dans l'état initial
         }
 
-        for (Integer stateNotInInitState : fluentsNotInInitState) {
-            VecInt clause = new VecInt(new int[]{-(stateNotInInitState + 1)});
-            clausesInitState.push(clause);
+        
+        for (Integer stateNotInInitState : fluentsNotInInitState) { // pour chaque fluent qui n'est pas dans l'état initial
+            VecInt clause = new VecInt(new int[]{-(stateNotInInitState + 1)}); // créer une clause avec le fluent
+            clausesInitState.push(clause); // ajouter la clause dans le vecteur de clausesEtat initial
         }
 
         LOGGER.debug("Clause init state: {}\n", clausesInitState);
@@ -240,19 +156,10 @@ public class SAT extends AbstractPlanner {
         return clausesInitState;
     }
 
-    /**
-     * Encode the final state as a CNF formula in dimacs format.
-     *
-     * @param problem  The problem to solve
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
     public Vec<IVecInt> encodeFinalState(final Problem problem, int planSize) {
 
-        Vec<IVecInt> clausesGoalState = new Vec<IVecInt>();
-
-        // Get the bit vector that contains all the fluents at the goal state
-        BitVector goalPosFluents = problem.getGoal().getPositiveFluents();
+        Vec<IVecInt> clausesGoalState = new Vec<IVecInt>(); // vecteur de clausesEtat final
+        BitVector goalPosFluents = problem.getGoal().getPositiveFluents();  // vecteur de fluents positifs de l'état final
 
         for (int p = goalPosFluents.nextSetBit(0); p >= 0; p = goalPosFluents.nextSetBit(p + 1)) {
             Fluent f = problem.getFluents().get(p);
@@ -269,13 +176,7 @@ public class SAT extends AbstractPlanner {
         return clausesGoalState;
     }
 
-    /**
-     * Encode the actions as a CNF formula in dimacs format.
-     *
-     * @param problem  The problem to solve
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
+    
     public Vec<IVecInt> encodeActions(final Problem problem, int planSize) {
 
         Vec<IVecInt> clausesActions = new Vec<IVecInt>();
@@ -284,22 +185,11 @@ public class SAT extends AbstractPlanner {
 
         for (int timeStep = 0; timeStep < planSize; timeStep++) {
             for (Action action : problem.getActions()) {
-
-                /*
-                 * For each action at each time step, we have: a_i -> (^p for p in
-                 * precondition__a_i) ^ (^e+ for e+ in effect+__a_i+1) ^ (^e- for e- in
-                 * effect-__a_i+1)
-                 */
-                int actionUniqueIDforTimeStep = getActionUniqueIDforTimeStep(problem, action, timeStep); // Gives a_i
-
-                // prettyPrintAction(action, problem);
-
-                // Get the states preconditions
+                int actionUniqueIDforTimeStep = getActionUniqueIDforTimeStep(problem, action, timeStep); // obtenir l'identifiant unique de l'action
+               
                 BitVector precondPos = action.getPrecondition().getPositiveFluents();
                 for (int p = precondPos.nextSetBit(0); p >= 0; p = precondPos.nextSetBit(p + 1)) {
                     f = problem.getFluents().get(p);
-
-                    // Add the fluent
                     int fluentUniqueIDforTimeStep = getFluentUniqueIDforTimeStep(problem, f, timeStep);
                     VecInt clause = new VecInt(new int[]{-actionUniqueIDforTimeStep, fluentUniqueIDforTimeStep});
                     clausesActions.push(clause);
@@ -310,7 +200,6 @@ public class SAT extends AbstractPlanner {
                 for (int p = precondNeg.nextSetBit(0); p >= 0; p = precondNeg.nextSetBit(p + 1)) {
                     f = problem.getFluents().get(p);
 
-                    // Add the fluent
                     int idxFluent = getFluentUniqueIDforTimeStep(problem, f, timeStep);
                     VecInt clause = new VecInt(new int[]{-actionUniqueIDforTimeStep, -idxFluent});
                     clausesActions.push(clause);
@@ -321,7 +210,7 @@ public class SAT extends AbstractPlanner {
                 for (int p = effectPos.nextSetBit(0); p >= 0; p = effectPos.nextSetBit(p + 1)) {
                     f = problem.getFluents().get(p);
 
-                    // Add the fluent
+                   
                     int idxFluent = getFluentUniqueIDforTimeStep(problem, f, timeStep + 1);
                     VecInt clause = new VecInt(new int[]{-actionUniqueIDforTimeStep, idxFluent});
                     clausesActions.push(clause);
@@ -333,7 +222,7 @@ public class SAT extends AbstractPlanner {
                 for (int p = effectNeg.nextSetBit(0); p >= 0; p = effectNeg.nextSetBit(p + 1)) {
                     f = problem.getFluents().get(p);
 
-                    // Add the fluent
+                   
                     int idxFluent = getFluentUniqueIDforTimeStep(problem, f, timeStep + 1);
                     VecInt clause = new VecInt(new int[]{-actionUniqueIDforTimeStep, -idxFluent});
                     clausesActions.push(clause);
@@ -348,19 +237,10 @@ public class SAT extends AbstractPlanner {
         return clausesActions;
     }
 
-    /**
-     * Encode the explanatory frame axioms as a CNF formula in dimacs format.
-     *
-     * @param problem  The problem to solve
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
+    
     public Vec<IVecInt> encodeExplanatoryFrameAxioms(final Problem problem, int planSize) {
 
         Vec<IVecInt> clausesExplanatoryFrameAxioms = new Vec<IVecInt>();
-
-        // For each state, initialize two lists which will contains all the actions
-        // that have this state as positive effects or negative effects
         ArrayList<Action>[] positiveEffectOnFluent = (ArrayList<Action>[]) new ArrayList[problem.getFluents().size()];
         ArrayList<Action>[] negativeEffectOnFluent = (ArrayList<Action>[]) new ArrayList[problem.getFluents().size()];
 
@@ -385,24 +265,20 @@ public class SAT extends AbstractPlanner {
             }
         }
 
-        // Now, we can construct the explanatory frame axioms
+       
         for (int stateIdx = 0; stateIdx < problem.getFluents().size(); stateIdx++) {
             for (int timeStep = 0; timeStep < planSize; timeStep++) {
                 if (positiveEffectOnFluent[stateIdx].size() != 0) {
-                    // Add this clause in CNF format
+            
 
                     Fluent f = problem.getFluents().get(stateIdx);
                     VecInt clause = new VecInt();
 
-                    // prettyPrintFluent(f, problem);
-
-                    // Add the fluent into the clause
                     clause.push(getFluentUniqueIDforTimeStep(problem, f, timeStep));
                     clause.push(-getFluentUniqueIDforTimeStep(problem, f, timeStep + 1));
 
-                    // And add all the actions which have this fluent has positive effect
+                    
                     for (Action action : positiveEffectOnFluent[stateIdx]) {
-                        // prettyPrintAction(action, problem);
                         clause.push(getActionUniqueIDforTimeStep(problem, action, timeStep));
                     }
 
@@ -410,12 +286,10 @@ public class SAT extends AbstractPlanner {
                 }
 
                 if (negativeEffectOnFluent[stateIdx].size() != 0) {
-                    // Add this clause in CNF format
-
+                
                     Fluent f = problem.getFluents().get(stateIdx);
                     VecInt clause = new VecInt();
 
-                    // Add the fluent into the clause
                     clause.push(-getFluentUniqueIDforTimeStep(problem, f, timeStep));
                     clause.push(getFluentUniqueIDforTimeStep(problem, f, timeStep + 1));
 
@@ -432,13 +306,7 @@ public class SAT extends AbstractPlanner {
         return clausesExplanatoryFrameAxioms;
     }
 
-    /**
-     * Encode the complete exclusion axioms as a CNF formula in dimacs format.
-     *
-     * @param problem  The problem to solve
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
+    
     public Vec<IVecInt> encodeCompleteExclusionAxioms(final Problem problem, int planSize) {
 
         Vec<IVecInt> clausesCompleteExclusionAxioms = new Vec<IVecInt>();
@@ -468,25 +336,7 @@ public class SAT extends AbstractPlanner {
         return clausesCompleteExclusionAxioms;
     }
 
-    /**
-     * Use a SAT solver to check if a problem is SATisfiable and to find a model.
-     * Taken from
-     * https://sat4j.gitbooks.io/case-studies/content/using-sat4j-as-a-java-library.html
-     *
-     * @param allClauses Problem encoded as a CNF formula in Dimacs format
-     * @param problem    The problem to solve
-     * @return A list of integer describing the model (each integer correspond to
-     * the unique ID given for each action and each fluent at each time
-     * step, see
-     * {@link #getActionUniqueIDforTimeStep}
-     * and
-     * {@link #getFluentUniqueIDforTimeStep} for more information on how
-     * each ID is given to the actions and fluents)
-     * if the problem is
-     * satisfiable else null
-     * @throws TimeoutException Throw a timeout exeception if the solver failed to
-     *                          find a solution in the timeout
-     */
+    
     public int[] solverSAT(Vec<IVecInt> allClauses, Problem problem) throws TimeoutException {
         final int MAXVAR = (problem.getFluents().size() + problem.getActions().size()) * this.taillePlan
                 + problem.getFluents().size();
@@ -495,10 +345,8 @@ public class SAT extends AbstractPlanner {
 
         ISolver solver = SolverFactory.newDefault();
 
-        // prepare the solver to accept MAXVAR variables. MANDATORY for MAXSAT solving
         solver.newVar(MAXVAR);
         solver.setExpectedNumberOfClauses(allClauses.size());
-        // solver.setTimeout(this.getTimeout());
 
         try {
             solver.addAllClauses(allClauses);
@@ -522,13 +370,7 @@ public class SAT extends AbstractPlanner {
         }
     }
 
-    /**
-     * Encode the problem as a CNF formula in dimacs format.
-     *
-     * @param problem  Problem to encode
-     * @param planSize Size of the plan
-     * @return A vector of set (VecInt) of litterals in the Dimacs format
-     */
+    
     public Vec<IVecInt> encodeProblemAsCNF(Problem problem, int planSize) {
         LOGGER.info("Encode the inital state into clauses\n");
         Vec<IVecInt> clausesInitState = encodeInitialState(problem, planSize);
@@ -559,20 +401,13 @@ public class SAT extends AbstractPlanner {
         return allClauses;
     }
 
-    /**
-     * Construct the plan from the model given as parameter.
-     *
-     * @param model   Model of the problem
-     * @param problem The problem to solve
-     * @return the plan construct from the model
-     */
+
     public Plan constructPlanFromModel(int[] model, Problem problem) {
         Plan plan = new SequentialPlan();
         int idxActionInPlan = 0;
         for (Integer idx : model) {
             Action a = getActionWithIdx(problem, idx);
             if (a != null) {
-                // prettyPrintAction(a, problem);
                 plan.add(idxActionInPlan, a);
                 idxActionInPlan++;
             }
@@ -580,12 +415,7 @@ public class SAT extends AbstractPlanner {
         return plan;
     }
 
-    /**
-     * Search a solution plan to a specific domain using a SAT solver.
-     *
-     * @param problem the problem to solve.
-     * @return the plan found or null if no plan was found.
-     */
+    
     @Override
     public Plan solve(final Problem problem) {
 
@@ -630,13 +460,7 @@ public class SAT extends AbstractPlanner {
                 break;
             }
         }
-
-        // Construct the plan from the model
         Plan plan = constructPlanFromModel(model, problem);
-
-        // If the option to write the plan to file is given by the
-        // user, do it now
-    
 
         return plan;
     }

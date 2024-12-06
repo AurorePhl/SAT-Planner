@@ -6,14 +6,14 @@ import matplotlib.pyplot as plt
 
 # repérer les repertoire de domaine et pbs
 # RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc2000\blocks\strips-typed")
-RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc2002\depots\strips-automatic")
+# RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc2002\depots\strips-automatic")
 # RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc1998\gripper\adl")
-# RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc1998\logistics\adl")
+RepBase = os.path.normpath(r"src\test\resources\benchmarks\pddl\ipc1998\logistics\adl")
 
 domaine = os.path.join(RepBase, "domain.pddl")
 
 problemesBlocks = [
-    "p01.pddl", "p02.pddl", "p03.pddl", "p04.pddl", "p05.pddl", "p06.pddl", "p07.pddl", "p08.pddl", "p09.pddl", "p10.pddl",
+    "p01.pddl", "p02.pddl"
 ]
     
 # repérer les répertoires des classes et librairies
@@ -90,12 +90,12 @@ for probleme in problemesBlocks:
 labelsProblemes = problemesBlocks
 
 plt.figure(figsize=(10, 8))  # taille de la figure
-plt.suptitle("Depots", fontsize=16)  # titre
+plt.suptitle("Gripper", fontsize=16)  # titre
 
 # graph temps d'exécution
 plt.subplot(2, 1, 1)
-plt.scatter(labelsProblemes, tempsASP, color="blue", marker="o", label="ASP")  # affichage des points
-plt.scatter(labelsProblemes, tempsSAT, color="green", marker="s", label="SAT")  # affichage des points
+plt.scatter(problemesBlocks, tempsASP, color="blue", marker="o", label="ASP")  # affichage des points
+plt.scatter(problemesBlocks, tempsSAT, color="green", marker="s", label="SAT")  # affichage des points
 plt.xlabel("Problèmes")
 plt.ylabel("Temps d'exécution (s)")
 plt.title("Temps d'exécution pour chaque problème")
