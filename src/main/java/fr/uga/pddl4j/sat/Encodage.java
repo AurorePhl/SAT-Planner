@@ -34,6 +34,12 @@ public class Encodage {
             writeCNFFile(outputFile, t);
             System.out.println("Fichier CNF généré : " + outputFile);
         }
+
+
+    }
+
+    public Map<String, Integer> getVariableMapping(){
+        return variableMapping;
     }
 
     private static void encodeCNFForState(PDDLDomain domain, PDDLProblem problem, int maxTime) {
