@@ -18,9 +18,24 @@ ASP - Longueur du plan pour p002.pddl: 10 actions
 ```
 
 ## Gripper
+```
+
+```
 
 ## Logistics
+```
+ASP - Temps d'exécution pour p01.pddl: 0.97 s
+ASP - Longueur du plan pour p01.pddl: 25 actions
 
+SAT - Temps d'exécution pour p01.pddl: 13.94 s
+SAT - Longueur du plan pour p01.pddl: 1 actions
+
+ASP - Temps d'exécution pour p02.pddl: 40.47 s
+ASP - Longueur du plan pour p02.pddl: 28 actions
+
+SAT - Temps d'exécution pour p02.pddl: 223.60 s
+SAT - Longueur du plan pour p02.pddl: 1 actions
+```
 
 # SAT-Planner
 
@@ -54,5 +69,5 @@ Pellier, D. (2021). SAT Planning — PDDL4J Exercises 0.1 documentation. http://
  
 Pellier, D. (2021). Writing your own Planner — PDDL4J 4.0 documentation.  http://pddl4j.imag.fr/writing_your_own_planner.html 
 
-https://github.com/gaspard-quenard/SAT_planner/blob/master/app/src/main/java/sat/SAT.java
+Quenard, G. (2022). SAT_planner. GitHub. https://github.com/gaspard-quenard/SAT_planner/blob/master/app/src/main/java/sat/SAT.java
 
