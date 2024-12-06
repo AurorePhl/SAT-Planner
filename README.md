@@ -24,16 +24,16 @@ ASP - Longueur du plan pour p002.pddl: 10 actions
 
 ## Logistics
 ```
-ASP - Temps d'exécution pour p01.pddl: 0.97 s
+ASP - Temps d'exécution pour p01.pddl: 0.75 s
 ASP - Longueur du plan pour p01.pddl: 25 actions
 
-SAT - Temps d'exécution pour p01.pddl: 13.94 s
+SAT - Temps d'exécution pour p01.pddl: 12.22 s
 SAT - Longueur du plan pour p01.pddl: 1 actions
 
-ASP - Temps d'exécution pour p02.pddl: 40.47 s
+ASP - Temps d'exécution pour p02.pddl: 36.64 s
 ASP - Longueur du plan pour p02.pddl: 28 actions
 
-SAT - Temps d'exécution pour p02.pddl: 223.60 s
+SAT - Temps d'exécution pour p02.pddl: 214.50 s
 SAT - Longueur du plan pour p02.pddl: 1 actions
 ```
 
