@@ -42,7 +42,12 @@ Exécution :
 ```
 java -cp "build/classes;build/libs/pddl4j-4.0.0.jar" fr.uga.pddl4j.sat.SAT  src\test\resources\benchmarks\pddl\testForSAT\domain.pddl  src\test\resources\benchmarks\pddl\testForSAT\p01.pddl  
 ```
+# Scripts 
 
+Compile ASP and SAT classes before, then : 
+```
+python src/scripts/script.py                            
+```
 
 # References : 
 Pellier, D. (2021). SAT Planning — PDDL4J Exercises 0.1 documentation. http://pddl4j.imag.fr/repository/exercices/sat_planning.html 
