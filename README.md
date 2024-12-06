@@ -44,3 +44,10 @@ java -cp "build/classes;build/libs/pddl4j-4.0.0.jar" fr.uga.pddl4j.sat.SAT  src\
 ```
 
 
+# References : 
+Pellier, D. (2021). SAT Planning — PDDL4J Exercises 0.1 documentation. http://pddl4j.imag.fr/repository/exercices/sat_planning.html 
+ 
+Pellier, D. (2021). Writing your own Planner — PDDL4J 4.0 documentation.  http://pddl4j.imag.fr/writing_your_own_planner.html 
+
+https://github.com/gaspard-quenard/SAT_planner/blob/master/app/src/main/java/sat/SAT.java
+
