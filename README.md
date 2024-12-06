@@ -1,3 +1,24 @@
+# Results 
+
+## Blocks 
+```
+ASP - Temps d'exécution pour p001.pddl: 0.29 s
+ASP - Longueur du plan pour p001.pddl: 6 actions
+
+SAT - Temps d'exécution pour p001.pddl: 0.51 s
+SAT - Longueur du plan pour p001.pddl: 8 actions
+
+ASP - Temps d'exécution pour p002.pddl: 0.29 s
+ASP - Longueur du plan pour p002.pddl: 10 actions
+```
+
+## Depots
+
+## Gripper
+
+## Logistics
+
+
 # SAT-Planner
 
 Example test of the sat4j solver :
